@@ -1,9 +1,9 @@
-.tip:hover {
+.tip {
     
     position: relative;
 }
 .tooltip {
-    
+    z-index: 1;
     border: 1px solid pink;
     position: absolute;
     max-width: 250px;
@@ -13,6 +13,12 @@
     color:  #fff;
 
     border-radius: 5px;
+
+    display: none;
+}
+
+.tip:hover .tooltip{
+    display: block;
 }
 .tooltip::before {
     content:'';
